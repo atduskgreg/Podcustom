@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Tim Morton's Podcast Control Zone</title>
+		<style>
+		body {
+			margin: 0;
+		}
+
+
+		h1{
+			background-color: #ea7;
+			margin:0;
+			padding: 5px;
+			color: #fff;
+
+		}
+		#body {
+			width: 800px;
+			margin-left: 50px;
+		}
+
+
+		input.text {
+			width: 400px;
+		}
+
+		label {
+			width: 125px;
+			text-align:right;
+			display:block;
+			float:left;
+			margin-right: 10px;
+			font-weight:bold;
+		}
+
+		.recording {
+			width: 700px;
+			border: 1px solid #dc8;
+			margin-bottom: 20px;
+		}
+
+		.recording b {
+			width: 125px;
+			text-align:right;
+			display:block;
+			float:left;
+			margin-right: 10px;
+		}
+
+		/*.recording h3 {
+			background-color: #dc8;
+			margin: 0;
+			padding: 5px;
+		}*/
+
+		.recording h3 {
+			margin: 0;
+			float: left;
+			margin-right: 20px;
+
+		}
+
+		.recording-control {
+			margin: 0;
+			background: #dc8;
+			padding: 5px;
+		}
+
+		.recording-control a {
+			color: #fff;
+			background-color: #dc8;
+			padding: 2px;
+		}
+
+
+		</style>
+
+	</head>
+	<body>
+		<h1>Tim Morton's Podcast Control Zone</h1>
+		<div id="body">
+			<%= yield %>
+		</div>
+	</body>
+</html>

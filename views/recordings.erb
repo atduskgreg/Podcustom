@@ -1,0 +1,20 @@
+
+<h2>List of Recordings</h2>
+<p><em><a href="/admin">click here to create a new recording</a></em></p>
+
+<% for recording in @recordings %>
+<div class="recording">
+		<div class="recording-control">
+
+	<h3>Recording <%= recording.id %></h3>
+		<a href="/recordings/edit/<%= recording.id %>">edit</a> 
+		<a href="/recordings/delete/<%= recording.id %>">delete</a>
+	</div>
+
+	<p><b>Title:</b> <%= recording.title %></p>
+	<p><b>MP3 URL</b>: <a href="<%= recording.mp3_url %>"><%= recording.mp3_url %></a></p>
+	<p><b>Size</b>: <%= recording.size %> MB</p>
+	<p><b>Created at</b>: <%= recording.created_at.strftime("%d %B %Y at %M:%I%p") %></p>
+	<p><b>Description</b>: <%= recording.description %></p>
+</div>
+<% end %>
