@@ -18,40 +18,40 @@ class Recording
 
   def self.rss
 
-    author = "Tim Morton"
+    author = "Greg Borenstein"
    
     rss = RSS::Rss.new("2.0")
     channel = RSS::Rss::Channel.new
    
-    category = RSS::ITunesChannelModel::ITunesCategory.new("Philosophy")
-    category.itunes_categories << RSS::ITunesChannelModel::ITunesCategory.new("Literature")
+    category = RSS::ITunesChannelModel::ITunesCategory.new("Visual Arts")
+    category.itunes_categories << RSS::ITunesChannelModel::ITunesCategory.new("Philosophy")
     channel.itunes_categories << category
    
-    channel.title = "Ecology Without Nature"
-    channel.description = "Class and lecture audio recordings from Professor Tim Morton on Object-Oriented Ontology, Romanticism, Hyperobjects"
-    channel.link = "http://ecologywithoutnature.blogspot.com"
+    channel.title = "Podcustom"
+    channel.description = "Custom podcast curated by Greg Borenstein for Greg Borenstein."
+    channel.link = "http://podcustom.heroku.com/recordings"
     channel.language = "en-us"
     channel.copyright = "Copyright #{Date.today.year} I Own This"
     channel.lastBuildDate = Time.now
   
     # below is your "album art"
     channel.image = RSS::Rss::Channel::Image.new
-    channel.image.url = "http://morton-podcast.heroku.com/ewn.jpg"
-    channel.image.title = "Ecology Without Nature"
-    channel.image.link = "http://ecologywithoutnature.blogspot.com"
+    channel.image.url = "http://podcustom.heroku.com/ewn.jpg"
+    channel.image.title = "Podcustom"
+    channel.image.link = "http://podcustom.heroku.com/recordings"
 
     channel.itunes_author = author
     channel.itunes_owner = RSS::ITunesChannelModel::ITunesOwner.new
     channel.itunes_owner.itunes_name=author
-    channel.itunes_owner.itunes_email='timothymorton303@gmail.com'
+    channel.itunes_owner.itunes_email='greg.borenstein@gmail.com'
 
-    channel.itunes_keywords = %w(OOO Object-Oriented Ontology Philosophy Ecology)
+    channel.itunes_keywords = %w(Technology Art Philosophy Computer Vision)
 
-    channel.itunes_subtitle = "Tim Morton on Object-Oriented Ontology, Romanticism, Hyperobjects."             
-    channel.itunes_summary = "Class and lecture audio recordings from Professor Tim Morton on Object-Oriented Ontology, Romanticism, Hyperobjects."
+    channel.itunes_subtitle = "Custom podcast curated by Greg Borenstein for Greg Borenstein."             
+    channel.itunes_summary = "Technology, art, computer vision, visual effects, object-oriented ontology."
 
      # below is what iTunes uses for your "album art", different from RSS standard
-    channel.itunes_image = RSS::ITunesChannelModel::ITunesImage.new("http://morton-podcast.heroku.com/ewn.jpg")
+    channel.itunes_image = RSS::ITunesChannelModel::ITunesImage.new("http://podcustom.heroku.com/ewn.jpg")
     channel.itunes_explicit = "Yes"
     # above could also be "Yes" or "Clean"
 
